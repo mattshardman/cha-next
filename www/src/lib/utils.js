@@ -1,16 +1,16 @@
-const { randomBytes, hash, box } = require('tweetnacl');
-const {
+import { randomBytes, hash, box } from 'tweetnacl';
+import {
   decodeBase64,
   encodeUTF8,
   decodeUTF8,
   encodeBase64,
-} = require('tweetnacl-util');
+} from 'tweetnacl-util';
 
-function createUint8Array(input) {
+export function createUint8Array(input) {
   return decodeBase64(input);
 }
 
-function encrypt(receiverPublicKey, msgParams) {
+export function encrypt(receiverPublicKey, msgParams) {
   const msgParamsHashedPW = JSON.stringify({
     user: msgParams.user,
     hash: encodeBase64(hash(decodeUTF8(msgParams.password))),
@@ -33,7 +33,7 @@ function encrypt(receiverPublicKey, msgParams) {
   };
 }
 /* Decrypt a message with a base64 encoded secretKey (privateKey) */
-function decrypt(receiverSecretKey, encryptedData) {
+export function decrypt(receiverSecretKey, encryptedData) {
   const receiverSecretKeyUint8Array = decodeBase64(receiverSecretKey);
   const nonce = decodeBase64(encryptedData.nonce);
   const ciphertext = decodeBase64(encryptedData.ciphertext);
@@ -47,5 +47,3 @@ function decrypt(receiverSecretKey, encryptedData) {
   );
   return encodeUTF8(decryptedMessage);
 }
-
-module.exports = { encrypt, decrypt };

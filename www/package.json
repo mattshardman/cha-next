@@ -1,0 +1,34 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "next.config.js",
+  "scripts": {
+    "dev": "next",
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Matt Hardman",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "next": "^8.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sha256": "^0.2.0",
+    "tweetnacl": "^1.0.1",
+    "tweetnacl-util": "^0.15.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1",
+    "react-test-renderer": "^16.8.6"
+  }
+}

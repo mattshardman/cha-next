@@ -2,32 +2,20 @@
   "name": "cha-next",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".eslintrc.js",
   "scripts": {
-    "dev": "next",
-    "test": "jest --watch"
+    "test": "jest --watch --findRelatedTests api-lib/encrypt-functions.test.js"
   },
   "keywords": [],
   "author": "Matt Hardman",
   "license": "ISC",
+  "devDependencies": {
+    "now-boom": "^0.0.9"
+  },
   "dependencies": {
-    "axios": "^0.18.0",
-    "babel-eslint": "^10.0.1",
-    "bcryptjs": "^2.4.3",
+    "express": "^4.16.4",
     "micro": "^9.3.3",
-    "next": "^8.0.4",
-    "now-boom": "^0.0.9",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "sha256": "^0.2.0",
     "tweetnacl": "^1.0.1",
     "tweetnacl-util": "^0.15.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
   }
 }

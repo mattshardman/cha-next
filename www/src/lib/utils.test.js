@@ -1,13 +1,15 @@
-const { box } = require('tweetnacl');
-const {
+import { box } from 'tweetnacl';
+import {
   encodeBase64,
-} = require('tweetnacl-util');
-const { encrypt, decrypt } = require('./encrypt-functions');
+} from 'tweetnacl-util';
+import { encrypt, decrypt } from './utils';
 
 describe('decrypt and encrypt functions', () => {
   const { publicKey, secretKey } = box.keyPair();
   const receiverPublicKey = encodeBase64(publicKey);
   const receiverSecretKey = encodeBase64(secretKey);
+  console.log(receiverPublicKey, receiverSecretKey);
+
 
   const p = 'pT/mh0ur8JHuSXVd4OPvvlySn5MOu/nWh+i7OSuZ2HE=';
   const s = 'YRDHSzOytYLhpI4EXcH0JuryzhNjqZVFTEO0JY71Aks=';
